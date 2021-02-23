@@ -10,3 +10,6 @@ docker run  --name testneo4j  -p7474:7474 -p7687:7687  -d  --env NEO4J_AUTH=neo4
 NOT CONNECTED: MATCH (p:Person) WHERE NOT(p:Person {registration:"BOSS"})<-[:IS_SUBORDINATE*]-(:Person) AND NOT ((:Person {registration: "BOSS"})<-[:IS_SUBORDINATE*]-(p:Person)) RETURN p
 
 CYCLE: MATCH (p:Person) WHERE (p:Person)<-[:IS_SUBORDINATE]-(p:Person) RETURN p
+
+# ImportSimpleStructure
+Use the class ImportStructureApplication in order to import a simple structure read in the form of csv:
